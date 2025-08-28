@@ -22,7 +22,7 @@ const contents = {
 
 
 export const TimeLineSection = () => {
-    const [activeYear, setActiveYear] = useState<string | null>(null);
+    const [activeYear, setActiveYear] = useState<string | null>("2022");
 
     const Content = activeYear ? contents[activeYear as keyof typeof contents] : contents["2022"];
 

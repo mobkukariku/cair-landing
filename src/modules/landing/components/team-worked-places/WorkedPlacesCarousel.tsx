@@ -49,7 +49,7 @@ export const WorkedPlacesCarousel = () => {
                         speed: 2,
                     }),
                 ]}
-                className={"w-full py-12 "}
+                className={"w-full py-12 hidden max-[1000px]:block"}
             >
                 <CarouselContent>
                     {companies.map((item, index) => (
@@ -68,6 +68,19 @@ export const WorkedPlacesCarousel = () => {
                     ))}
                 </CarouselContent>
             </Carousel>
+
+            <div className={"max-[1000px]:hidden flex w-full py-12 justify-center items-center gap-12"}>
+                {companies.map((item, index) => (
+                    <Image
+                        key={index}
+                        width={80}
+                        height={80}
+                        src={item.logo}
+                        alt={item.name}
+                        className="object-contain"
+                    />
+                ))}
+            </div>
         </div>
     );
 };

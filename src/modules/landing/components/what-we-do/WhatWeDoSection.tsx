@@ -1,5 +1,6 @@
 import {Container} from "@/shared/components/Container";
 import {Button} from "@/shared/ui/button";
+import Image from "next/image";
 
 export const WhatWeDoSection = () => {
     return (
@@ -21,7 +22,14 @@ export const WhatWeDoSection = () => {
                    Join us
                </Button>
            </div>
-            <div className={"w-[652px] h-[369px] bg-foreground rounded-3xl"}></div>
+            <Image
+                src={"/images/freedom-workshop.png"}
+                width={630}
+                height={380}
+                className={"h-[380px] object-cover object-center rounded-xl"}
+                alt="What we do"
+
+            />
         </Container>
     )
 }

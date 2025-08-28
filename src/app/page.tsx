@@ -3,6 +3,7 @@ import {OurProjectsSection} from "@/modules/landing/components/our-projects/OurP
 import {TimeLineSection} from "@/modules/landing/components/timeline-section/TimeLineSection";
 import {WhatWeDoSection} from "@/modules/landing/components/what-we-do/WhatWeDoSection";
 import {PreviouslyWorkedSection} from "@/modules/landing/components/team-worked-places/PreviouslyWorkedSection";
+import {WhoWeAreSection} from "@/modules/landing/components/who-we-are/WhoWeAreSection";
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
           <TimeLineSection />
           <WhatWeDoSection />
           <PreviouslyWorkedSection />
-
+          <WhoWeAreSection />
       </>
   );
 }
