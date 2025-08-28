@@ -2,6 +2,7 @@ import {MainBannerSection} from "@/modules/landing/components/main-banner/MainBa
 import {OurProjectsSection} from "@/modules/landing/components/our-projects/OurProjectsSection";
 import {TimeLineSection} from "@/modules/landing/components/timeline-section/TimeLineSection";
 import {WhatWeDoSection} from "@/modules/landing/components/what-we-do/WhatWeDoSection";
+import {PreviouslyWorkedSection} from "@/modules/landing/components/team-worked-places/PreviouslyWorkedSection";
 
 
 export default function Home() {
@@ -11,6 +12,8 @@ export default function Home() {
           <OurProjectsSection />
           <TimeLineSection />
           <WhatWeDoSection />
+          <PreviouslyWorkedSection />
+
       </>
   );
 }
