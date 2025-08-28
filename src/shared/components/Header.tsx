@@ -32,7 +32,7 @@ export const Header = () => {
                         height={34}
                         src={"Logo.svg"}
                         alt={"logo"}
-                        className="transition-transform duration-300 hover:scale-105"
+                        className="transition-transform duration-300 "
                     />
                     <section className={"flex gap-3"}>
                         <Button variant={"outline"} className="transition-all duration-300 hover:scale-105">

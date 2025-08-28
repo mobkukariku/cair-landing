@@ -1,0 +1,45 @@
+"use client"
+import {Container} from "@/shared/components/Container";
+import React, {useState} from "react";
+import dynamic from "next/dynamic";
+import {TimeLine} from "@/modules/landing/components/timeline-section/TimeLine";
+import {TimeLineSkeleton} from "@/modules/landing/components/timeline-section/TimeLineSkeleton";
+
+const contents = {
+    "2022": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content22"), {
+        ssr: false,
+        loading: () => <TimeLineSkeleton />
+    }),
+    "2023": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content23"), {
+        ssr: false,
+        loading: () => <TimeLineSkeleton />
+    }),
+    "2024": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content24"), {
+        ssr: false,
+        loading: () => <TimeLineSkeleton />
+    })
+};
+
+
+export const TimeLineSection = () => {
+    const [activeYear, setActiveYear] = useState<string | null>(null);
+
+    const Content = activeYear ? contents[activeYear as keyof typeof contents] : contents["2022"];
+
+    return (
+        <Container className={"pt-[120px] pb-[50px]"}>
+            <h2 className={"text-[40px] font-black "}>
+                Born remote, built for the future.
+            </h2>
+            <p className={"w-[550px] text-[#F0F9FF] opacity-70 mt-[20px]"}>
+                Since 2021, RemoFirst has been on a mission to make global team building a breeze. We connect companies with top talent around the world, tearing down borders and opening up new possibilities. With a focus on people, excellence, and delivery, we empower businesses to grow on their own terms—without the compliance headaches.
+            </p>
+            <hr className={"my-10 border-card"}/>
+            <section className={"flex flex-row items-center justify-between"}>
+                <Content />
+                <TimeLine years={Object.keys(contents)} setActiveYear={setActiveYear} activeYear={activeYear} />
+            </section>
+            <hr className={"my-10 border-card"}/>
+        </Container>
+    )
+}

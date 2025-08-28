@@ -1,14 +1,14 @@
 import {Container} from "@/shared/components/Container";
 import Image from "next/image";
-import {LandingVector} from "@/modules/landing/LandingVector";
+import {LandingVector} from "@/modules/landing/components/main-banner/LandingVector";
 import {BookOpenIcon, BracesIcon, ShieldCheckIcon} from "lucide-react";
-import {MainBannerText} from "@/modules/landing/MainBannerText";
+import {MainBannerText} from "@/modules/landing/components/main-banner/MainBannerText";
 
-export default function LandingSection() {
+export function MainBannerSection() {
     return (
         <Container className={"h-[650px]"}>
             <div className={"relative"}>
-                <MainBannerText  />
+                <MainBannerText />
                 <Image
                     className="mt-[60px] w-[1076px] h-[350px]"
                     width={1076}
@@ -21,16 +21,19 @@ export default function LandingSection() {
                         <LandingVector
                             imageSrc={"/landing/vector-2.svg"}
                             title={"Research"}
+                            colorText="#2ABF84"
                             icon={<BookOpenIcon width={46} height={46} />}
                         />
                         <LandingVector
                             imageSrc={"/landing/vector-3.svg"}
                             title={"Development"}
+                            colorText="#2F75C8"
                             icon={<BracesIcon width={46} height={46} />}
                         />
                         <LandingVector
                             imageSrc={"/landing/vector-4.svg"}
                             title={"Certification"}
+                            colorText="#8440E3"
                             icon={<ShieldCheckIcon width={46} height={46} />}
                         />
                     </div>
