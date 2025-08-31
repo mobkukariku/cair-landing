@@ -4,6 +4,8 @@ import {TimeLineSection} from "@/modules/landing/components/timeline-section/Tim
 import {WhatWeDoSection} from "@/modules/landing/components/what-we-do/WhatWeDoSection";
 import {PreviouslyWorkedSection} from "@/modules/landing/components/team-worked-places/PreviouslyWorkedSection";
 import {WhoWeAreSection} from "@/modules/landing/components/who-we-are/WhoWeAreSection";
+import {OurPartnersSection} from "@/modules/landing/components/our-partners/OurPartnersSection";
+import {JoinUsSection} from "@/modules/landing/components/join-us/JoinUsSection";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
           <WhatWeDoSection />
           <PreviouslyWorkedSection />
           <WhoWeAreSection />
+          <OurPartnersSection />
+          <JoinUsSection />
       </>
   );
 }

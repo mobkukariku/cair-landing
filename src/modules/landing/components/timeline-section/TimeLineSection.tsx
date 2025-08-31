@@ -2,19 +2,19 @@
 import {Container} from "@/shared/components/Container";
 import React, {useState} from "react";
 import dynamic from "next/dynamic";
-import {TimeLine} from "@/modules/landing/components/timeline-section/TimeLine";
-import {TimeLineSkeleton} from "@/modules/landing/components/timeline-section/TimeLineSkeleton";
+import {TimeLine} from "@/modules/landing/components/timeline-section/ui/TimeLine";
+import {TimeLineSkeleton} from "@/modules/landing/components/timeline-section/ui/TimeLineSkeleton";
 
 const contents = {
-    "2022": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content22"), {
+    "2022": dynamic(() => import("@/modules/landing/components/timeline-section/ui/TimelineContent/Content22"), {
         ssr: false,
         loading: () => <TimeLineSkeleton />
     }),
-    "2023": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content23"), {
+    "2023": dynamic(() => import("@/modules/landing/components/timeline-section/ui/TimelineContent/Content23"), {
         ssr: false,
         loading: () => <TimeLineSkeleton />
     }),
-    "2024": dynamic(() => import("@/modules/landing/components/timeline-section/TimelineContent/Content24"), {
+    "2024": dynamic(() => import("@/modules/landing/components/timeline-section/ui/TimelineContent/Content24"), {
         ssr: false,
         loading: () => <TimeLineSkeleton />
     })

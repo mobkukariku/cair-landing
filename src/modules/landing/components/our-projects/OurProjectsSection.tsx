@@ -1,5 +1,5 @@
 import {Container} from "@/shared/components/Container";
-import {ProjectsCarousel} from "@/modules/landing/components/our-projects/ProjectsCarousel";
+import {ProjectsCarousel} from "@/modules/landing/components/our-projects/ui/ProjectsCarousel";
 
 export const OurProjectsSection = () => {
 

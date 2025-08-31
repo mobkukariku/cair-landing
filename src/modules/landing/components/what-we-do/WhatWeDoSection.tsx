@@ -19,7 +19,7 @@ export const WhatWeDoSection = () => {
                    </p>
                </div>
                <Button className={"mt-[30px]"}>
-                   Join us
+                   <a target={"_blank"} href="https://docs.google.com/forms/d/e/1FAIpQLSc4py_BCIXQ_4HhSM79TDihBoIdpSBNaGJkdjHEHLc7pW58-w/viewform">Join Us</a>
                </Button>
            </div>
             <Image

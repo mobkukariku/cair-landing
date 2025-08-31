@@ -1,5 +1,5 @@
 import {Container} from "@/shared/components/Container";
-import {WhoWeAreCardItem} from "@/modules/landing/components/who-we-are/WhoWeAreCardItem";
+import {WhoWeAreCardItem} from "@/modules/landing/components/who-we-are/ui/WhoWeAreCardItem";
 import {color} from "motion-dom";
 import {CodeXmlIcon} from "lucide-react";
 

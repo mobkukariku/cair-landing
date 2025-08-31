@@ -1,6 +1,6 @@
 "use client"
 import {Carousel, CarouselContent, CarouselItem} from "@/shared/ui/carousel";
-import {ProjectItem} from "@/modules/landing/components/our-projects/ProjectItem";
+import {ProjectItem} from "@/modules/landing/components/our-projects/ui/ProjectItem";
 import Autoscroll from "embla-carousel-auto-scroll"
 
 export const ProjectsCarousel = () => {

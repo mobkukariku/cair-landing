@@ -1,8 +1,8 @@
 import {Container} from "@/shared/components/Container";
 import Image from "next/image";
-import {LandingVector} from "@/modules/landing/components/main-banner/LandingVector";
+import {LandingVector} from "@/modules/landing/components/main-banner/ui/LandingVector";
 import {BookOpenIcon, BracesIcon, ShieldCheckIcon} from "lucide-react";
-import {MainBannerText} from "@/modules/landing/components/main-banner/MainBannerText";
+import {MainBannerText} from "@/modules/landing/components/main-banner/ui/MainBannerText";
 
 export function MainBannerSection() {
     return (
