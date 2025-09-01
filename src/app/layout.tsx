@@ -3,9 +3,10 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {Header} from "@/shared/components/Header";
 import {Footer} from "@/shared/components/Footer";
+import {routing} from "@/shared/lib/i18n/routing";
 const inter = Inter({
     variable: "--font-inter",
-    subsets: ["latin", "cyrillic"], // добавляем кириллицу
+    subsets: ["latin", "cyrillic"],
     display: "swap",
 });
 export const metadata: Metadata = {
@@ -19,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} ${inter.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+      <html lang={routing.defaultLocale}>
+          <body
+            className={`${inter.className} ${inter.variable} antialiased`}
+          >
+                <Header />
+                    {children}
+                <Footer />
+          </body>
+      </html>
   );
 }

@@ -5,6 +5,7 @@ import {BookOpenIcon, BracesIcon, ShieldCheckIcon} from "lucide-react";
 import {MainBannerText} from "@/modules/landing/components/main-banner/ui/MainBannerText";
 
 export function MainBannerSection() {
+
     return (
         <Container className={"h-[650px]"}>
             <div className={"relative"}>
