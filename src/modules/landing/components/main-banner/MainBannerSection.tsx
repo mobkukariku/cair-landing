@@ -1,45 +1,50 @@
-import {Container} from "@/shared/components/Container";
+// MainBannerSection.tsx
+"use client"
+import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from 'next-intl';
 import Image from "next/image";
-import {LandingVector} from "@/modules/landing/components/main-banner/ui/LandingVector";
-import {BookOpenIcon, BracesIcon, ShieldCheckIcon} from "lucide-react";
+import {SubVectors} from "@/modules/landing/components/main-banner/ui/SubVectors";
 import {MainBannerText} from "@/modules/landing/components/main-banner/ui/MainBannerText";
 
-export function MainBannerSection() {
+export const MainBannerSection = () => {
+    const locale = useLocale();
 
     return (
-        <Container className={"h-[650px]"}>
-            <div className={"relative"}>
-                <MainBannerText />
-                <Image
-                    className="mt-[60px] w-[1076px] h-[350px]"
-                    width={1076}
-                    height={350}
-                    src={"/landing/vector-1.svg"}
-                    alt={"vector-1"}
-                />
-                <div className={"absolute left-1/2  -translate-x-1/2 top-[300px]"}>
-                    <div className={"flex items-end justify-center gap-4"}>
-                        <LandingVector
-                            imageSrc={"/landing/vector-2.svg"}
-                            title={"Research"}
-                            colorText="#2ABF84"
-                            icon={<BookOpenIcon width={46} height={46} />}
+        <section className="relative">
+            <div className="relative h-[1000px] w-full overflow-hidden">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={locale}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex justify-center inset-0"
+                    >
+                        <MainBannerText />
+                        <Image
+                            className="mt-[60px] w-[1076px] h-[350px]"
+                            width={1076}
+                            height={350}
+                            src={"/landing/vector-1.svg"}
+                            alt={"vector-1"}
                         />
-                        <LandingVector
-                            imageSrc={"/landing/vector-3.svg"}
-                            title={"Development"}
-                            colorText="#2F75C8"
-                            icon={<BracesIcon width={46} height={46} />}
-                        />
-                        <LandingVector
-                            imageSrc={"/landing/vector-4.svg"}
-                            title={"Certification"}
-                            colorText="#8440E3"
-                            icon={<ShieldCheckIcon width={46} height={46} />}
-                        />
-                    </div>
-                </div>
+                    </motion.div>
+                </AnimatePresence>
             </div>
-        </Container>
-    )
-}
+
+            <AnimatePresence >
+                <motion.div
+                    key={locale}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <SubVectors />
+                </motion.div>
+            </AnimatePresence>
+        </section>
+    );
+};
+

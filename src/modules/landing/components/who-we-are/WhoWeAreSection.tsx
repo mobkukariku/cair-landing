@@ -20,7 +20,7 @@ export const WhoWeAreSection = () => {
                 <WhoWeAreCardItem
                     color={"#d4f542"}
                     icon={<CodeXmlIcon width={40} height={40} color={"#d4f542"} />}
-                    name={"Development"}
+                    name={"Software"}
                 />
                 <WhoWeAreCardItem
                     color={"#4A7EBB"}
