@@ -16,6 +16,7 @@ export const LandingVector = ({imageSrc, icon, title, colorText}:LandingVector) 
                 height={270}
                 src={imageSrc}
                 alt={title}
+                priority={true}
             />
             <div
                 className={`flex flex-col items-center justify-center gap-1 absolute  left-1/2  -translate-x-1/2  top-1/2 -translate-y-1/2`}

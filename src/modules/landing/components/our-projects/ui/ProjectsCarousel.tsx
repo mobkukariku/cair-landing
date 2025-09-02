@@ -14,14 +14,14 @@ export const ProjectsCarousel = () => {
                     speed: 2
                 }),
             ]}
-            opts={{ align: "start", loop: true }}
-            className="w-full"
+            opts={{ align: "start", loop: true, containScroll: "trimSnaps" }}
+            className="w-full my-20"
         >
-            <CarouselContent className="flex gap-[150px]">
-                {Array.from({length: 20}).map((_, index) => (
+            <CarouselContent className="flex space-x-[150px]">
+                {Array.from({length: 10}).map((_, index) => (
                     <CarouselItem
                         key={index}
-                        className="flex-[0_0_auto] w-[250px] mt-10"
+                        className="flex-[0_0_auto] w-[250px] mr-[150px]"
                     >
                         <ProjectItem
                             title="KZH"

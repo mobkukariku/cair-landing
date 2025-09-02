@@ -2,7 +2,7 @@ import {useTranslations} from "next-intl";
 
 export const MainBannerText = () => {
 
-        const t = useTranslations('landing.mainBanner');
+        const t = useTranslations("landing.mainBanner");
 
     return (
         <div className={"absolute left-1/2  -translate-x-1/2 top-[60px]"}>
