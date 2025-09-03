@@ -35,17 +35,11 @@ export default async function PublicLayout(
 
 
   return (
-      <html lang={locale}>
-          <body
-            className={`${inter.className} ${inter.variable} antialiased`}
-          >
-          <NextIntlClientProvider locale={locale} messages={messages}>
-              <Header />
-                    {children}
-              <Footer />
-          </NextIntlClientProvider>
-          </body>
-      </html>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+      </NextIntlClientProvider>
   );
 }
 
