@@ -5,12 +5,13 @@ interface TimeLineProps {
     years: string[];
     activeYear: string | null;
     setActiveYear: (year: string | null) => void;
+    className?: string;
 }
 
 
-export const TimeLine = ({ years, setActiveYear, activeYear }: TimeLineProps) => {
+export const TimeLine = ({ years, setActiveYear, activeYear, className }: TimeLineProps) => {
     return (
-        <div className="flex flex-col items-center gap-5 mx-5">
+        <div className={`flex flex-col max-[640px]:flex-row items-center gap-5 mx-5 ${className}`}>
             {years.map((year, index) => (
                 <React.Fragment key={year}>
                     <div
@@ -20,7 +21,7 @@ export const TimeLine = ({ years, setActiveYear, activeYear }: TimeLineProps) =>
                     >
                         {year}
                     </div>
-                    {year < years[years.length - 1] && <div className="w-1 h-10 bg-card/70 rounded" />}
+                    {year < years[years.length - 1] && <div className="w-1 h-10 max-[640px]:w-10 max-[640px]:h-1 bg-card/70 rounded" />}
                 </React.Fragment>
             ))}
         </div>

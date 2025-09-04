@@ -1,40 +1,39 @@
 import {Container} from "@/shared/components/Container";
-import Image from "next/image";
 import {BookOpenIcon, BracesIcon, ShieldCheckIcon} from "lucide-react";
 import {MainBannerText} from "@/modules/landing/components/main-banner/ui/MainBannerText";
 import {LandingVector} from "@/modules/landing/components/main-banner/ui/LandingVector";
+import {Shape1} from "@/modules/landing/components/main-banner/ui/Shape1";
+import {Shape2} from "@/modules/landing/components/main-banner/ui/Shape2";
+import {Shape3} from "@/modules/landing/components/main-banner/ui/Shape3";
+import {Shape4} from "@/modules/landing/components/main-banner/ui/Shape4";
 
 export function MainBannerSection() {
     return (
-        <Container className={"h-[650px]"}>
+        <Container className={"h-[600px] max-[512px]:h-fit max-[512px]:mb-20"}>
             <div className={"relative"}>
                 <MainBannerText />
-                <Image
-                    className="mt-[60px] w-[1076px] h-[350px]"
-                    width={1076}
-                    height={350}
-                    src={"/landing/vector-1.svg"}
-                    alt={"vector-1"}
-                />
-                <div className={"absolute left-1/2  -translate-x-1/2 top-[300px]"}>
-                    <div className={"flex items-end justify-center gap-4"}>
+               <div className={"mt-10 max-[512px]:hidden"}>
+                   <Shape1 />
+               </div>
+                <div className={"-mt-[50px] max-[512px]:mt-[150px]"}>
+                    <div className={"flex max-[512px]:flex-col max-[512px]:items-center items-end justify-center gap-4 "}>
                         <LandingVector
-                            imageSrc={"/landing/vector-2.svg"}
+                            vector={<Shape2 />}
                             title={"Research"}
                             colorText="#2ABF84"
-                            icon={<BookOpenIcon width={46} height={46} />}
+                            icon={<BookOpenIcon className={"w-[46px] h-[46px] max-[512px]:w-[26px] max-[512px]:h-[26px]"} />}
                         />
                         <LandingVector
-                            imageSrc={"/landing/vector-3.svg"}
+                            vector={<Shape3 />}
                             title={"Development"}
                             colorText="#2F75C8"
-                            icon={<BracesIcon width={46} height={46} />}
+                            icon={<BracesIcon className={"w-[46px] h-[46px] max-[512px]:w-[26px] max-[512px]:h-[26px]"} />}
                         />
                         <LandingVector
-                            imageSrc={"/landing/vector-4.svg"}
+                            vector={<Shape4 />}
                             title={"Certification"}
                             colorText="#8440E3"
-                            icon={<ShieldCheckIcon width={46} height={46} />}
+                            icon={<ShieldCheckIcon className={"w-[46px] h-[46px] max-[512px]:w-[26px] max-[512px]:h-[26px]"} />}
                         />
                     </div>
                 </div>

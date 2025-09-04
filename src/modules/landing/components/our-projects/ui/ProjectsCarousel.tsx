@@ -15,9 +15,9 @@ export const ProjectsCarousel = () => {
                 }),
             ]}
             opts={{ align: "start", loop: true, containScroll: "trimSnaps" }}
-            className="w-full my-20"
+            className="w-full mb-5 mt-10"
         >
-            <CarouselContent className="flex space-x-[150px]">
+            <CarouselContent className="flex space-x-[150px] max-[512px]:space-x-[100px]">
                 {Array.from({length: 10}).map((_, index) => (
                     <CarouselItem
                         key={index}

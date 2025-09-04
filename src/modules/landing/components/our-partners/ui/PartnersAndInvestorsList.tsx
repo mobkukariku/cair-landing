@@ -40,7 +40,7 @@ const companies = [
 
 export const PartnersAndInvestorsList = () => {
     return (
-        <section className={"bg-white my-20 py-10"}>
+        <section className={"bg-white my-10 py-10"}>
             <Container>
                 <div className={"flex flex-row justify-between"}>
                     {companies.map((companie, index) => (

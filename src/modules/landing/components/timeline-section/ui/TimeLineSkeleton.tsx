@@ -1,5 +1,4 @@
 import { Skeleton } from "@/shared/ui/skeleton"
-import { motion } from "framer-motion"
 
 export const TimeLineSkeleton = () => {
     return (

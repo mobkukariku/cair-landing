@@ -6,7 +6,7 @@ export const OurProjectsSection = () => {
     return (
         <section>
             <Container>
-                <h2 className={"text-[40px] font-bold text-foreground "}>Our projects</h2>
+                <h2 className={"text-[40px] max-[512px]:text-center max-[768px]:text-[36px] max-[512px]:text-[28px] font-bold text-foreground "}>Our projects</h2>
             </Container>
             <ProjectsCarousel />
         </section>

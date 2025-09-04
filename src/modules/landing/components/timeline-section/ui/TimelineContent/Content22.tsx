@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 
 export default function Content22() {
     return (
-        <div>
+        <div className="px-4 sm:px-6 lg:px-10">
             <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="text-[30px] font-bold"
+                className="text-[22px] sm:text-[30px] font-bold text-center sm:text-left"
             >
                 2022: Year of Change
             </motion.h2>
@@ -16,7 +16,13 @@ export default function Content22() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="w-[500px] text-gray-300 mt-5"
+                className="
+          mt-5 text-gray-300
+          text-[14px] sm:text-[16px]
+          max-w-full sm:max-w-[500px]
+          text-center sm:text-left
+          mx-auto sm:mx-0
+        "
             >
                 In 2022, many significant events took place in the world of technology,
                 education, and culture. This year became known as a period of rapid
@@ -24,14 +30,14 @@ export default function Content22() {
             </motion.p>
 
             <motion.ul
-                className="space-y-2 text-tags mt-10"
+                className="mt-8 sm:mt-10 space-y-2 text-tags"
                 initial="hidden"
                 animate="visible"
                 variants={{
                     hidden: {},
                     visible: {
                         transition: {
-                            staggerChildren: 0.2, // delay between list items
+                            staggerChildren: 0.2,
                         },
                     },
                 }}
@@ -56,7 +62,7 @@ export default function Content22() {
                 ].map((item, i) => (
                     <motion.li
                         key={i}
-                        className="flex items-start gap-2"
+                        className="flex items-start gap-2 text-[14px] sm:text-[16px] text-center sm:text-left"
                         variants={{
                             hidden: { opacity: 0, y: 20 },
                             visible: { opacity: 1, y: 0 },

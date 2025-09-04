@@ -36,20 +36,34 @@ const mockEvents2023 = [
 
 const Content23 = () => {
     return (
-        <div className="flex flex-col gap-6">
+        <div
+            className="
+        grid gap-6
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-2
+        xl:grid-cols-4
+      "
+        >
             {mockEvents2023.map((event, index) => (
                 <motion.div
                     key={event.id}
-                    initial={{ opacity: 0, y: 20, }}
-                    animate={{ opacity: 1, y: 0, }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
-                    className="p-5 rounded-2xl shadow-lg bg-card/80 backdrop-blur-sm"
+                    className="
+            p-5 rounded-2xl shadow-lg
+            bg-card/80 backdrop-blur-sm
+            hover:scale-[1.02] transition-transform
+          "
                 >
-                    <div className="flex items-center gap-3 text-lg text-tags font-semibold">
-                        <span className="text-2xl">{event.icon}</span>
+                    <div className="flex items-center gap-3 text-base sm:text-lg text-tags font-semibold">
+                        <span className="text-xl sm:text-2xl">{event.icon}</span>
                         {event.title}
                     </div>
-                    <p className="text-foreground mt-2">{event.description}</p>
+                    <p className="text-foreground mt-2 text-sm sm:text-base">
+                        {event.description}
+                    </p>
                 </motion.div>
             ))}
         </div>

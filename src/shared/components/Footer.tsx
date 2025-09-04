@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Footer = () => {
     return (
         <footer className={`bg-black`}>
-            <Container className={"flex flex-row justify-between items-start pt-15 pb-20"}>
+            <Container className={"flex flex-row max-[768px]:flex-col max-[768px]:gap-10 justify-between items-start pt-15 pb-20"}>
                 <Image
                     width={128}
                     height={100}

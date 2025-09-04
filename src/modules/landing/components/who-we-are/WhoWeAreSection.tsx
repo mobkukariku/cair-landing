@@ -8,11 +8,11 @@ export const WhoWeAreSection = () => {
         <Container className={"my-10"}>
             <div>
                 <h3
-                    className={"text-[40px] font-bold"}
+                    className={"text-[40px] max-[768px]:text-[36px] max-[512px]:text-[28px] font-bold"}
                 >
                     Who we are
                 </h3>
-                <p className={"text-foreground opacity-70 w-[700px] mt-4"}>
+                <p className={"text-foreground opacity-70 w-[700px] max-[768px]:w-fit max-[512px]:text-[14px] mt-4"}>
                     Our team is made up of problem solvers and overachievers, and we seek out others who are also passionate and relentless in their respective missions. Our team has previously worked at TriNet, Indeed, Amazon, Monday.com, Goldman Sachs, Palantir, LinkedIn, DocuSign, PagerDuty.
                 </p>
             </div>
