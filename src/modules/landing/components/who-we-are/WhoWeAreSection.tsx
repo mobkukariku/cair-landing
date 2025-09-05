@@ -1,6 +1,5 @@
 import {Container} from "@/shared/components/Container";
 import {WhoWeAreCardItem} from "@/modules/landing/components/who-we-are/ui/WhoWeAreCardItem";
-import {color} from "motion-dom";
 import {CodeXmlIcon} from "lucide-react";
 
 export const WhoWeAreSection = () => {
@@ -16,7 +15,7 @@ export const WhoWeAreSection = () => {
                     Our team is made up of problem solvers and overachievers, and we seek out others who are also passionate and relentless in their respective missions. Our team has previously worked at TriNet, Indeed, Amazon, Monday.com, Goldman Sachs, Palantir, LinkedIn, DocuSign, PagerDuty.
                 </p>
             </div>
-            <div className={"flex mt-10 flex-wrap justify-center flex-row gap-4"}>
+            <div className={"flex mt-10 flex-wrap w-full flex-row gap-4"}>
                 <WhoWeAreCardItem
                     color={"#d4f542"}
                     icon={<CodeXmlIcon width={40} height={40} color={"#d4f542"} />}

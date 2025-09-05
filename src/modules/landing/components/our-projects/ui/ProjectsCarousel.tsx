@@ -1,27 +1,36 @@
-"use client"
-import {Carousel, CarouselContent, CarouselItem} from "@/shared/ui/carousel";
-import {ProjectItem} from "@/modules/landing/components/our-projects/ui/ProjectItem";
-import Autoscroll from "embla-carousel-auto-scroll"
+"use client";
+import { useEffect, useState } from "react";
+import { Carousel, CarouselContent, CarouselItem } from "@/shared/ui/carousel";
+import { ProjectItem } from "@/modules/landing/components/our-projects/ui/ProjectItem";
+import Autoscroll from "embla-carousel-auto-scroll";
 
 export const ProjectsCarousel = () => {
+    const [speed, setSpeed] = useState(2);
+
+    useEffect(() => {
+        if (window.innerWidth < 512) {
+            setSpeed(0.5); // меняем только на клиенте
+        }
+    }, []);
+
     return (
         <Carousel
             plugins={[
                 Autoscroll({
-                    stopOnInteraction: false,
+                    stopOnInteraction: true,
                     stopOnMouseEnter: true,
                     playOnInit: true,
-                    speed: 2
+                    speed,
                 }),
             ]}
             opts={{ align: "start", loop: true, containScroll: "trimSnaps" }}
             className="w-full mb-5 mt-10"
         >
-            <CarouselContent className="flex space-x-[150px] max-[512px]:space-x-[100px]">
-                {Array.from({length: 10}).map((_, index) => (
+            <CarouselContent >
+                {Array.from({ length: 10 }).map((_, index) => (
                     <CarouselItem
                         key={index}
-                        className="flex-[0_0_auto] w-[250px] mr-[150px]"
+                        className="shrink-0 basis-auto"
                     >
                         <ProjectItem
                             title="KZH"
@@ -33,5 +42,5 @@ export const ProjectsCarousel = () => {
                 ))}
             </CarouselContent>
         </Carousel>
-    )
-}
+    );
+};

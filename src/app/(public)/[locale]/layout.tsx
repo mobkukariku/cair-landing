@@ -1,5 +1,5 @@
 import "../../globals.css";
-import {Header} from "@/shared/components/header/Header";
+import {Header} from "@/shared/components/header/ui/Header";
 import {Footer} from "@/shared/components/Footer";
 import {hasLocale} from "use-intl";
 import {routing} from "@/shared/lib/i18n/routing";
