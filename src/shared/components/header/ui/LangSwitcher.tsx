@@ -13,6 +13,7 @@ export const LangSwitcher = () => {
             <SelectContent>
                 <SelectItem value="ru">RU</SelectItem>
                 <SelectItem value="en">ENG</SelectItem>
+                <SelectItem value="kz">KZ</SelectItem>
             </SelectContent>
         </Select>
     )

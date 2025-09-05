@@ -1,3 +1,4 @@
 import MainBannerRU from "./ru.json";
 import MainBannerEN from "./en.json";
-export { MainBannerRU, MainBannerEN };
+import MainBannerKZ from "./kz.json";
+export { MainBannerRU, MainBannerEN, MainBannerKZ };
