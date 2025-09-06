@@ -67,7 +67,6 @@ export function MainBannerSection() {
                         >
                             <LandingVector
                                 vector={<Shape4 />}
-                                viewport={{ once: true }}
                                 title={t('certification')}
                                 colorText="#8440E3"
                                 icon={<ShieldCheckIcon className={"w-[46px] h-[46px] max-[512px]:w-[26px] max-[512px]:h-[26px]"} />}
