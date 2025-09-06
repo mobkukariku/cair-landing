@@ -12,7 +12,7 @@ export const JoinUsSection = () => {
     const words = text.split(" ");
 
     return (
-        <Container className={"flex flex-col my-30 justify-center items-center gap-5"}>
+        <Container className={"flex flex-col my-50 justify-center items-center gap-5"}>
             <motion.h3
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}

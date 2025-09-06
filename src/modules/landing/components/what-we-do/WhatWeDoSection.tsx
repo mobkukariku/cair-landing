@@ -9,7 +9,7 @@ export const WhatWeDoSection = () => {
     const t = useTranslations('landing.whatWeDo')
 
     return (
-        <Container className={"flex flex-col max-[1076px]:gap-10 py-[100px]"}>
+        <Container className={"flex flex-col max-[1076px]:gap-10 mt-20 mb-50 py-[100px]"}>
             <motion.h3
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}

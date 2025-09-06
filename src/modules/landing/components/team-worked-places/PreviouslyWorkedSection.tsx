@@ -9,7 +9,7 @@ export const PreviouslyWorkedSection = () => {
     const t = useTranslations("landing.previouslyWorkedPlaces");
 
     return (
-        <section className={"my-20"}>
+        <section className={"my-50"}>
             <motion.h3
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}

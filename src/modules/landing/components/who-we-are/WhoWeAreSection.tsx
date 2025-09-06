@@ -23,7 +23,7 @@ export const WhoWeAreSection = () => {
 
 
     return (
-        <Container className={"my-10"}>
+        <Container className={"mt-50 mb-80"}>
             <div>
                 <motion.h3
                     viewport={{ once: true }}
@@ -50,7 +50,7 @@ export const WhoWeAreSection = () => {
                 </div>
             </div>
             <motion.div
-                className="flex mt-10 flex-wrap w-full flex-row gap-4"
+                className="flex mt-10 flex-wrap w-full h-full gap-4"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -61,7 +61,7 @@ export const WhoWeAreSection = () => {
             >
                 {whoWeAreItems.map((item, i) => (
                     <motion.div
-                        className={"w-full"}
+                        className={"max-[512px]:w-full "}
                         key={i+4}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

@@ -9,7 +9,7 @@ export const OurPartnersSection = () => {
     const t = useTranslations('landing.ourPartners');
 
     return (
-        <section>
+        <section className={"mt-50 mb-80"}>
             <motion.h3
                 viewport={{ once: true }}
                 initial={{ opacity: 0, y: 20 }}
