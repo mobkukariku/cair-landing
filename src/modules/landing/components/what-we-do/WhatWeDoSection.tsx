@@ -70,6 +70,7 @@ export const WhatWeDoSection = () => {
                         height={380}
                         className={"h-[380px] max-[512px]:h-[200px] object-cover object-center rounded-xl"}
                         alt="What we do"
+                        loading={"lazy"}
 
                     />
                 </motion.div>
