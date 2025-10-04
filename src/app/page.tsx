@@ -1,20 +1,14 @@
-import {MainBannerSection} from "@/modules/landing/components/main-banner/MainBannerSection";
-import {OurProjectsSection} from "@/modules/landing/components/our-projects/OurProjectsSection";
-import {TimeLineSection} from "@/modules/landing/components/timeline-section/TimeLineSection";
-import {WhatWeDoSection} from "@/modules/landing/components/what-we-do/WhatWeDoSection";
-import {PreviouslyWorkedSection} from "@/modules/landing/components/team-worked-places/PreviouslyWorkedSection";
-import {WhoWeAreSection} from "@/modules/landing/components/who-we-are/WhoWeAreSection";
+import { redirect } from "next/navigation";
+import { routing } from "@/shared/lib/i18n/routing";
+import Cookies from "js-cookie";
+
+export default function RootPage() {
+    const cookieLocale = Cookies.get("NEXT_LOCALE");
+
+    const locale = routing.locales.includes(cookieLocale as ('en' | 'ru' | 'kz') ?? "")
+        ? cookieLocale
+        : routing.defaultLocale;
 
 
-export default function Home() {
-  return (
-      <>
-          <MainBannerSection />
-          <OurProjectsSection />
-          <TimeLineSection />
-          <WhatWeDoSection />
-          <PreviouslyWorkedSection />
-          <WhoWeAreSection />
-      </>
-  );
+    return redirect(`/${locale}`);
 }
